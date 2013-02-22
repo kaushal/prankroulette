@@ -6,8 +6,8 @@ import random
 
 
 # Get these credentials from http://twilio.com/user/account
-account_sid = "AC566da319c49345fe4fbbbea81ada1de0"
-auth_token = "741080b04bcb6c2471cf9439d939abce"
+account_sid = ""
+auth_token = ""
 client = TwilioRestClient(account_sid, auth_token)
 room_number = 0;
 
@@ -24,6 +24,7 @@ def setUpCall(numbers):
 		call = client.calls.create(to=num,
 					from_="+14159686840",
 					url="http://twimlets.com/conference?Name=" + room + "&Message=%20")
+	return call
 
 #nums = ["+19085287844", "+16107616189", "+17326681916", "+17324850325"]
 # resources = client.calls.list()
